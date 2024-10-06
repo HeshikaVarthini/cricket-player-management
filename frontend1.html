@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .role-button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .role-button:hover {
+            background-color: #ddd;
+        }
+        .admin-btn { background-color: #f44336; color: white; }
+        .franchise-btn { background-color: #2196f3; color: white; }
+        .player-btn { background-color: #4caf50; color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Cricket Management System</h1>
+        <p>Select your role:</p>
+        
+        <button class="role-button admin-btn" onclick="navigateToRole('admin')">Admin</button>
+        <button class="role-button franchise-btn" onclick="navigateToRole('franchise')">Franchise</button>
+        <button class="role-button player-btn" onclick="navigateToRole('player')">Player</button>
+    </div>
+
+    <script>
+        function navigateToRole(role) {
+            switch(role) {
+                case 'admin':
+                    window.location.href = 'admin.html'; // Redirect to Admin Page
+                    break;
+                case 'franchise':
+                    window.location.href = 'franchise.html'; // Redirect to Franchise Page
+                    break;
+                case 'player':
+                    window.location.href = 'player.html'; // Redirect to Player Page
+                    break;
+                default:
+                    alert("Invalid selection");
+            }
+        }
+    </script>
+
+</body>
+</html>
